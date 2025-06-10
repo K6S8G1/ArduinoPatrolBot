@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikacja Ochrony</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="csv-container">
+            <h2>Pomiary Patrolu</h2>
+            <input type="file" id="file1" accept=".csv" />
+            <table id="csv1-table">
+                <thead>
+                    <tr>
+                        <th>Measurement</th>
+                        <th>LeftDistance</th>
+                        <th>FrontDistance</th>
+                        <th>RightDistance</th>
+                        <th>LeftWheelDistance</th>
+                        <th>RightWheelDistance</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="csv-container">
+            <h2>Pomiary Mapy</h2>
+            <input type="file" id="file2" accept=".csv" />
+            <table id="csv2-table">
+                <thead>
+                    <tr>
+                        <th>Measurement</th>
+                        <th>LeftDistance</th>
+                        <th>FrontDistance</th>
+                        <th>RightDistance</th>
+                        <th>LeftWheelDistance</th>
+                        <th>RightWheelDistance</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="patrolowanie">Patrolowanie</button>
+        <button id="mapowanie">Mapowanie</button>
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+        <button id="compare">Porównaj</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

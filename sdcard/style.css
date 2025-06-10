@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.csv-container {
+    width: 45%;
+    border: 1px solid #444;
+    padding: 10px;
+    background-color: #1e1e1e;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.buttons {
+    display: grid;
+    align-items: center;
+    width: 15%;
+    margin-bottom: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+}
+
+button.active {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+button:not(.active) {
+    background-color: #f44336;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8px;
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+}
+
+.highlight-green {
+    background-color: #2e7d32;
+}
+
+.highlight-red {
+    background-color: #d32f2f;
+}
+
+.highlight-orange {
+    background-color: #ff9800;
+}
