@@ -9,42 +9,6 @@
 
 ----------------------------------------------------------------------------------------------
 
-## 📁 Struktura projektu
-
-ArduinoPatrolBot/
-├── src/                          
-│   ├── ArduinoPatrolBot.ino
-│   ├── config.h
-│   ├── motors.*
-│   ├── sensors.*
-│   ├── wifi_comms.*
-│   ├── storage.*
-│   ├── line_following.*
-│
-├── sdcard/                       
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
-│                       
-├── docs/
-|   ├── Diagrams/
-|   |   ├── Diagrams.pdf
-|   ├── UML_Diagrams/
-|   |   ├── Diagram Aktywności.png
-|   |   ├── Diagram Przypadków.png
-|   |   ├── Diagram Sekwencji.png
-|   ├── Prototype_Photo/
-|   |   ├── Robot3.jpg
-|   |   ├── Robot4.webp
-|   |   ├── Robot5.jpg
-|   |   ├── Robot6.jpg
-|   |   ├── Robot7.jpg                         
-├── .gitignore
-├── LICENSE
-└── README.md
-
-----------------------------------------------------------------------------------------------
-
 ## 🔧 Wymagane biblioteki Arduino
 
 - `WiFiS3` – komunikacja WiFi

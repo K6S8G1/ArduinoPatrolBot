@@ -10,19 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const compareButton = document.getElementById('compare');
 
     function loadCSV(url, tableId) {
-        fetch(url)
-            .then(response => response.text())
-            .then(csvData => {
-                const data = parseCSV(csvData);
-                displayCSVData(data, tableId);
-                if (tableId === 'csv1-table') {
-                    file1Data = data;
-                } else if (tableId === 'csv2-table') {
-                    file2Data = data;
-                }
-            })
-            .catch(error => console.error('Error loading CSV:', error));
+    fetch(url)
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+        })
+        .then(csvData => {
+            const data = parseCSV(csvData);
+            displayCSVData(data, tableId);
+            if (tableId === 'csv1-table') {
+                file1Data = data;
+            } else if (tableId === 'csv2-table') {
+                file2Data = data;
+            }
+        })
+        .catch(error => {
+            console.warn(`Nie udało się załadować ${url}:`, error.message);
+            // 🧼 Nie czyść tabeli, jeśli nie udało się pobrać danych
+        });
     }
+
 
     loadCSV('/map.csv', 'csv2-table');
     loadCSV('/patrol.csv', 'csv1-table');
